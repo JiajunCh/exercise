@@ -1,9 +1,9 @@
-#ifndef __UART_H
-#define __UART_H
+#ifndef _UART_H
+#define _UART_H
 
 void uart_config(void);
-void put_char(char c);
-char get_char(void);
+int put_char(int c);
+int get_char(void);
 
 #endif
 

@@ -15,16 +15,17 @@ void uart_config(void){
 	UCON0 = ((0x1<<2) | 0x01);
 }
 
-void put_char(char c){
+int put_char(int c){
 	while(!(UTRSTAT0&(0x01<<2)))
-		UTXH0 = c;
+		UTXH0 = (unsigned char)c;
+	return 0;
 }
 
-char get_char(void){
+int get_char(void){
 	if(UTRSTAT0&0x01)
-		return (char)URXH0;
+		return (int)URXH0;
 	else
-		return (char)(-1);
+		return -1;
 }
 
 

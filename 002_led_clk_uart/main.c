@@ -5,7 +5,7 @@
 #include "s3c2440_soc.h"
 
 int main(void){
-	char temp_char = 0;
+	int temp_char = 0;
 	clk_config();
 	wdg_config();
 	uart_config();

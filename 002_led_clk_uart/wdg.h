@@ -1,5 +1,5 @@
-#ifndef __WDG_H
-#define __WDG_H
+#ifndef _WDG_H
+#define _WDG_H
 
 void wdg_config(void);
 

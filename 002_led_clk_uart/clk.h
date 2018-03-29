@@ -1,5 +1,5 @@
-#ifndef __CLK_H
-#define __CLK_H
+#ifndef _CLK_H
+#define _CLK_H
 
 
 void clk_config(void);

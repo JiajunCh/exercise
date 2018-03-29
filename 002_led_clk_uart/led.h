@@ -1,5 +1,5 @@
-#ifndef __LED_H
-#define __LED_H
+#ifndef _LED_H
+#define _LED_H
 
 #define LED_ON		(0)
 #define LED_OFF		(1)
