@@ -10,9 +10,7 @@
 #define	LED4		(6)
 
 void led_config(void);
-void set_led(int led, int val)；
-
-
+void set_led(int led, int val);
 
 #endif
 
