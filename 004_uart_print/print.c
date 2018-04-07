@@ -1,6 +1,7 @@
  
 #include "print.h"
 #include "uart.h"
+#include "led.h"
 
 #define MAX_NUMBER_BYTES	64
 
@@ -42,13 +43,14 @@ static int out_num(long n, int radix, char lead, int maxwidth){
 		maxwidth--;
 	}while(temp > 0);
 
-	while(maxwidth--)
+	while((maxwidth--) > 0)
 		*(--s) = lead;
 	
 	if(n < 0)
 		*(--s) = '-';
 
 	outs(s);
+
 	return 0;
 }
 
@@ -62,8 +64,8 @@ static int vprintf(const char *fmt, va_list ap){
 			continue;
 		}
 		
-		lead=' ';
-		maxwidth=0;
+		lead = ' ';
+		maxwidth = 0;
 		fmt++;
 		
 		if(*fmt == '0'){
